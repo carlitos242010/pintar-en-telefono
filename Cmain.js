@@ -18,14 +18,14 @@ if(width<992){
   function my_touchstart(e){
     color = document.getElementById("color").value;
     Grosor=document.getElementById("grosor").value;
-   ultima_posicion_x = e.clientX -canvas.offsetLeft;
-    ultima_posicion_y = e.clientY -canvas.offsetTop;
+   ultima_posicion_x = e.touches[0].clientX -canvas.offsetLeft;
+    ultima_posicion_y = e.touches[0].clientY -canvas.offsetTop;
    }
   canvas.addEventListener("touchmove" , my_touchmove);
   
   function my_touchmove(e){
-    touch_posicion_actual_x = e.clientX -canvas.offsetLeft;
-    touch_posicion_actual_y = e.clientY -canvas.offsetTop;
+    touch_posicion_actual_x = e.touches[0].clientX -canvas.offsetLeft;
+    touch_posicion_actual_y = e.touches[0].clientY -canvas.offsetTop;
    
       ctx.beginPath();
       ctx.strokeStyle = color;
